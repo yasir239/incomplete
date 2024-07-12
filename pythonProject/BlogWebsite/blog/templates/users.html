@@ -1,0 +1,13 @@
+<!-- blog/templates/users.html -->
+{% extends 'master.html' %}
+
+{% block title %}All Users - My Blog{% endblock %}
+
+{% block content %}
+<h2>All Users</h2>
+<ul>
+    {% for user in users %}
+    <li>{{ user.username }} - {{ user.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

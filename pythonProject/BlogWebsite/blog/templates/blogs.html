@@ -1,0 +1,13 @@
+<!-- blog/templates/blogs.html -->
+{% extends 'master.html' %}
+
+{% block title %}All Blog Posts - My Blog{% endblock %}
+
+{% block content %}
+<h2>All Blog Posts</h2>
+<ul>
+    {% for post in posts %}
+    <li><a href="{% url 'blog_details' post.id %}">{{ post.title }}</a> - {{ post.category }} - {{ post.date_published }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
